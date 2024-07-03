@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teachers",
+  "info": {
+    "name": "Teaching-Engineers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "specialty": {
+      "type": "text"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "courses": {
+      "via": "teaching_engineer",
+      "collection": "course"
+    },
+    "diplomats": {
+      "via": "teaching_engineers",
+      "collection": "diplomat"
+    }
+  }
+}

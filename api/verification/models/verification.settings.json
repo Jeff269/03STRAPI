@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verifications",
+  "info": {
+    "name": "Verification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

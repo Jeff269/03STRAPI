@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sections",
+  "info": {
+    "name": "Section"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "course": {
+      "via": "sections",
+      "model": "course"
+    },
+    "resources": {
+      "via": "section",
+      "collection": "resource"
+    }
+  }
+}

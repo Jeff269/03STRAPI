@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diplomats",
+  "info": {
+    "name": "Diplomat",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "directed_to": {
+      "type": "richtext"
+    },
+    "why_specialize": {
+      "type": "richtext"
+    },
+    "class_start": {
+      "type": "datetime"
+    },
+    "courses": {
+      "collection": "course",
+      "via": "diplomat"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "investment_diplomats": {
+      "collection": "investment-diplomat",
+      "via": "diplomats",
+      "dominant": true
+    },
+    "teaching_engineers": {
+      "collection": "teacher",
+      "via": "diplomats",
+      "dominant": true
+    },
+    "temary_diplomats": {
+      "collection": "temary-diplomat",
+      "via": "diplomat"
+    },
+    "url_brochure": {
+      "type": "text"
+    },
+    "old": {
+      "type": "boolean",
+      "default": false
+    },
+    "culminate": {
+      "type": "boolean",
+      "default": false
+    },
+    "discount_date": {
+      "type": "string"
+    },
+    "percentage_discount": {
+      "type": "string"
+    }
+  }
+}

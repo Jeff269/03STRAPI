@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/temary-diplomats",
+      "handler": "temary-diplomat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temary-diplomats/count",
+      "handler": "temary-diplomat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/temary-diplomats/:id",
+      "handler": "temary-diplomat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/temary-diplomats",
+      "handler": "temary-diplomat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/temary-diplomats/:id",
+      "handler": "temary-diplomat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/temary-diplomats/:id",
+      "handler": "temary-diplomat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

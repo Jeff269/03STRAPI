@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investment_diplomats",
+  "info": {
+    "name": "Investment-Diplomat"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "inscription": {
+      "type": "decimal",
+      "required": false
+    },
+    "number_quota": {
+      "type": "integer"
+    },
+    "quota": {
+      "type": "decimal"
+    },
+    "certification": {
+      "type": "decimal"
+    },
+    "diplomats": {
+      "via": "investment_diplomats",
+      "collection": "diplomat"
+    }
+  }
+}

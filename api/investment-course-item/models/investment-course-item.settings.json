@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investment_course_items",
+  "info": {
+    "name": "Investment-Course-Item"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "investment_course": {
+      "via": "investment_course_items",
+      "model": "investment-course"
+    }
+  }
+}

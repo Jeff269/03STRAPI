@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "class_start": {
+      "type": "datetime"
+    },
+    "direct_to": {
+      "type": "richtext"
+    },
+    "competencie": {
+      "type": "richtext"
+    },
+    "topics": {
+      "type": "richtext"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "sections": {
+      "collection": "section",
+      "via": "course"
+    },
+    "diplomat": {
+      "via": "courses",
+      "model": "diplomat"
+    },
+    "investment_courses": {
+      "collection": "investment-course",
+      "via": "courses",
+      "dominant": true
+    },
+    "teaching_engineer": {
+      "model": "teacher",
+      "via": "courses"
+    },
+    "temary_courses": {
+      "collection": "unit",
+      "via": "course"
+    },
+    "url_brochure": {
+      "type": "text"
+    },
+    "old": {
+      "type": "boolean",
+      "default": false
+    },
+    "culminate": {
+      "type": "boolean",
+      "default": false
+    },
+    "percentage_discount": {
+      "type": "string"
+    },
+    "discount_date": {
+      "type": "string"
+    }
+  }
+}

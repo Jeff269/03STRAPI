@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_methods",
+  "info": {
+    "name": "payment-method",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "businessname": {
+      "type": "text"
+    },
+    "accountnumber": {
+      "type": "text"
+    },
+    "CCI": {
+      "type": "string"
+    },
+    "QRCode": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "interbank",
+        "bbva",
+        "bancodelanacion",
+        "bcp",
+        "yape",
+        "tunki",
+        "plin"
+      ]
+    }
+  }
+}

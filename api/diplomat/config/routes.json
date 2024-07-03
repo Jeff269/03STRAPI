@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/diplomats",
+      "handler": "diplomat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/diplomats/count",
+      "handler": "diplomat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/diplomats/:id",
+      "handler": "diplomat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/diplomats",
+      "handler": "diplomat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/diplomats/:id",
+      "handler": "diplomat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/diplomats/:id",
+      "handler": "diplomat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/investment-diplomats",
+      "handler": "investment-diplomat.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/investment-diplomats/count",
+      "handler": "investment-diplomat.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/investment-diplomats/:id",
+      "handler": "investment-diplomat.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/investment-diplomats",
+      "handler": "investment-diplomat.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/investment-diplomats/:id",
+      "handler": "investment-diplomat.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/investment-diplomats/:id",
+      "handler": "investment-diplomat.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/investment-courses",
+      "handler": "investment-course.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/investment-courses/count",
+      "handler": "investment-course.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/investment-courses/:id",
+      "handler": "investment-course.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/investment-courses",
+      "handler": "investment-course.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/investment-courses/:id",
+      "handler": "investment-course.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/investment-courses/:id",
+      "handler": "investment-course.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
